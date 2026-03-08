@@ -23,3 +23,13 @@ O jogador deve utilizar as operações de encher, esvaziar e transferir água en
 2. Clone o repositório:
    ```bash
    git clone [https://github.com/SEU_USUARIO/algortimo-dois-baldes.git](https://github.com/SEU_USUARIO/algortimo-dois-baldes.git)
+
+   ---
+
+## 👤 Autor
+
+Desenvolvido por **Helio Souza**. Se quiser trocar uma ideia sobre algoritmos ou Python, me encontre aqui:
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/helio-souza-dev/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/helio-souza-dev)
+[![E-mail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:heliosoltb@gmail.com)
