@@ -15,9 +15,7 @@ O jogador deve utilizar as operações de encher, esvaziar e transferir água en
 * **Controle de Versão:** Git / Git Bash
 
 ## 📸 Demonstração
-> [!TIP]
-> (Dica: Adicione aqui um GIF do seu jogo rodando ou um print da tela de vitória!)
-> ![Screenshot do Jogo](link-da-sua-imagem.png)
+![Screenshot do Jogo](./assets/print1.png)
 
 ## 🏁 Como Rodar
 1. Certifique-se de ter o Python instalado.
