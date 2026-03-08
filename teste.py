@@ -5,17 +5,14 @@ import os
 diretorio_atual = os.path.dirname(__file__)
 
 root = tk.Tk()
-root.title("Exemplo de Botões")
+root.title("Jogo dos Baldes")
 
 
 try:
     img1 = tk.PhotoImage(file=os.path.join(diretorio_atual, "balde.png"))
     img2 = tk.PhotoImage(file=os.path.join(diretorio_atual, "balde_cheio.png"))
 except tk.TclError:
-    print("Erro: As imagens não foram encontradas na pasta do script!")
-    
-    img1 = tk.PhotoImage(width=100, height=100)
-    img2 = tk.PhotoImage(width=100, height=100)
+    print("as imagens nao foram encontradas na pasta do codigo")
 
 b3_max = 3
 b5_max = 5
