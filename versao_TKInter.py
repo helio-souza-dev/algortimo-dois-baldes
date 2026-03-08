@@ -4,13 +4,15 @@ import os
 # Pega o caminho da pasta onde o script está salvo para não dar erro de "arquivo não encontrado"
 diretorio_atual = os.path.dirname(__file__)
 
+
 root = tk.Tk()
 root.title("Jogo dos Baldes")
 
 
 try:
-    img1 = tk.PhotoImage(file=os.path.join(diretorio_atual, "balde.png"))
-    img2 = tk.PhotoImage(file=os.path.join(diretorio_atual, "balde_cheio.png"))
+    pasta_assets = "assets"
+    img1 = tk.PhotoImage(file=os.path.join(diretorio_atual, pasta_assets, "balde.png"))
+    img2 = tk.PhotoImage(file=os.path.join(diretorio_atual, pasta_assets, "balde_cheio.png"))
 except tk.TclError:
     print("as imagens nao foram encontradas na pasta do codigo")
 
