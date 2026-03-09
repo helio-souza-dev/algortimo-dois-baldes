@@ -55,7 +55,7 @@ def verificar_vitoria():
         tk.Button(tela_vitoria, text="Jogar Novamente", command=reiniciar_jogo).pack(pady=20)
 
 def reiniciar_jogo():
-    global b3, b5, desperdicio, tela_vitoria
+    global b3, b5, desperdicio, tela_vitoria, contagem
     if vitoria == True:
         tela_vitoria.pack_forget()
         frame.pack()
@@ -68,6 +68,8 @@ def reiniciar_jogo():
 
         desperdicio = 0
         desperdicio_var.set(f"desperdicio = {desperdicio}")
+        contagem = 0
+        contagem_var.set(f"passos = {contagem}")
 
         label_img1.config(image=img1)
         label_img2.config(image=img1)
