@@ -31,6 +31,10 @@ desperdicio = 0
 desperdicio_var = tk.StringVar()
 desperdicio_var.set(f"desperdicio = {desperdicio}")
 
+contagem = 0
+contagem_var = tk.StringVar()
+contagem_var.set(f"passos = {contagem}")
+
 vitoria = False
 tela_vitoria = None
 
@@ -45,7 +49,7 @@ def verificar_vitoria():
         
         tk.Label(tela_vitoria, text="🏆", font=("Arial", 50)).pack()
         tk.Label(tela_vitoria, text="PARABÉNS!", font=("Arial", 20, "bold")).pack()
-        tk.Label(tela_vitoria, text=f"Você conseguiu 4L com {desperdicio}L de desperdício.").pack(pady=10)
+        tk.Label(tela_vitoria, text=f"Você conseguiu 4L com {desperdicio}L de desperdício e {contagem} passos.").pack(pady=10)
 
         
         tk.Button(tela_vitoria, text="Jogar Novamente", command=reiniciar_jogo).pack(pady=20)
@@ -67,6 +71,11 @@ def reiniciar_jogo():
 
         label_img1.config(image=img1)
         label_img2.config(image=img1)
+
+def contar():
+    global contagem
+    contagem += 1
+    contagem_var.set(f"passos = {contagem}")
 
 if b3 > b3_max:
     desperdicio = b3 - b3_max
@@ -97,6 +106,7 @@ def despejar_para_3():
         label_img1.config(image=img1)
     
     verificar_vitoria()
+    contar()
 
 def despejar_para_5():
     global b3, b5
@@ -119,6 +129,7 @@ def despejar_para_5():
         label_img1.config(image=img1)
 
     verificar_vitoria()
+    contar()
 
 def trocar_btn1():
     global b5
@@ -126,6 +137,7 @@ def trocar_btn1():
     b5 = b5_max
     b5_var.set(f"b5 = {b5}")
     verificar_vitoria()
+    contar()
 
 def trocar_btn2():
     global b3
@@ -133,6 +145,7 @@ def trocar_btn2():
     b3 = b3_max
     b3_var.set(f"b3 = {b3}")
     verificar_vitoria()
+    contar()
 
 def esvaziar_balde3l():
     global b3, desperdicio
@@ -141,6 +154,7 @@ def esvaziar_balde3l():
     label_img2.config(image=img1)
     desperdicio += 3
     desperdicio_var.set(f"desperdicio = {desperdicio}")
+    contar()
 
 def esvaziar_balde5l():
     global b5, desperdicio
@@ -149,6 +163,7 @@ def esvaziar_balde5l():
     label_img1.config(image=img1)
     desperdicio += 5
     desperdicio_var.set(f"desperdicio = {desperdicio}")
+    contar()
 
 frame = tk.Frame(root)
 frame.pack(padx=30, pady=30)
@@ -189,6 +204,9 @@ botao6 = tk.Button(frame, text="Transferir agua", command=despejar_para_5)
 botao6.grid(row=3, column=3, padx=5, pady=10)
 
 label_desperdicio = tk.Label(frame, textvariable=desperdicio_var)
-label_desperdicio.grid(row=4, column=1, columnspan=2, padx=20)
+label_desperdicio.grid(row=4, column=1, padx=10)
+
+label_contagem = tk.Label(frame, textvariable=contagem_var)
+label_contagem.grid(row=4, column=1, columnspan=4, padx=40)
 
 root.mainloop()
